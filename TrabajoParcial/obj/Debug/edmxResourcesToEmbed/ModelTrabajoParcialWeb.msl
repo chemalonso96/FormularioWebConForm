@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TrabajoParcialModelStoreContainer" CdmEntityContainer="TrabajoParcialEntities">
+    <EntitySetMapping Name="Avance">
+      <EntityTypeMapping TypeName="TrabajoParcialModel.Avance">
+        <MappingFragment StoreEntitySet="Avance">
+          <ScalarProperty Name="AvenceId" ColumnName="AvenceId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Porcentaje" ColumnName="Porcentaje" />
+          <ScalarProperty Name="Hora" ColumnName="Hora" />
+          <ScalarProperty Name="DesarrolladorResponsableId" ColumnName="DesarrolladorResponsableId" />
+          <ScalarProperty Name="ProyectoId" ColumnName="ProyectoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DearrolladorProyecto">
+      <EntityTypeMapping TypeName="TrabajoParcialModel.DearrolladorProyecto">
+        <MappingFragment StoreEntitySet="DearrolladorProyecto">
+          <ScalarProperty Name="DesarrolladorProyectoId" ColumnName="DesarrolladorProyectoId" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="ProyectoId" ColumnName="ProyectoId" />
+          <ScalarProperty Name="DesarrolladorResponsableId" ColumnName="DesarrolladorResponsableId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Desarrollador">
+      <EntityTypeMapping TypeName="TrabajoParcialModel.Desarrollador">
+        <MappingFragment StoreEntitySet="Desarrollador">
+          <ScalarProperty Name="DesarrolladorId" ColumnName="DesarrolladorId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="NroDocumento" ColumnName="NroDocumento" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proyecto">
+      <EntityTypeMapping TypeName="TrabajoParcialModel.Proyecto">
+        <MappingFragment StoreEntitySet="Proyecto">
+          <ScalarProperty Name="ProyectoId" ColumnName="ProyectoId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="EstaFinalizado" ColumnName="EstaFinalizado" />
+          <ScalarProperty Name="DesarrolladorResponsableId" ColumnName="DesarrolladorResponsableId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoDocumento">
+      <EntityTypeMapping TypeName="TrabajoParcialModel.TipoDocumento">
+        <MappingFragment StoreEntitySet="TipoDocumento">
+          <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+          <ScalarProperty Name="Siglas" ColumnName="Siglas" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

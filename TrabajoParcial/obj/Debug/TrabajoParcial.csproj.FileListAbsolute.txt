@@ -1,0 +1,42 @@
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\bin\Debug\TrabajoParcial.exe.config
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\bin\Debug\TrabajoParcial.exe
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\bin\Debug\TrabajoParcial.pdb
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\bin\Debug\EntityFramework.dll
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\bin\Debug\EntityFramework.xml
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.csprojResolveAssemblyReference.cache
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmDesarroladores.resources
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmPrincipal.resources
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmRegistrarDesarrollador.resources
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.Properties.Resources.resources
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.csproj.GenerateResource.Cache
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.exe
+c:\users\mac\documents\visual studio 2015\Projects\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.pdb
+C:\Users\MAC\Documents\Visual Studio 2015\Projects\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmProyectos.resources
+C:\Users\MAC\Documents\Visual Studio 2015\Projects\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmEditProyecto.resources
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\bin\Debug\TrabajoParcial.exe.config
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.exe
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.pdb
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\bin\Debug\TrabajoParcial.exe
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\bin\Debug\TrabajoParcial.pdb
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\bin\Debug\EntityFramework.dll
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\bin\Debug\EntityFramework.xml
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.csprojResolveAssemblyReference.cache
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmDesarroladores.resources
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmEditProyecto.resources
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmPrincipal.resources
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmProyectos.resources
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmRegistrarDesarrollador.resources
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.Properties.Resources.resources
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.csproj.GenerateResource.Cache
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmEquipo.resources
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmRegistrarEquipo.resources
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmAvance.resources
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmRegistrarAvance.resources
+C:\Users\MAC\Desktop\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.frmReporte.resources
+C:\Users\MAC\Desktop\CODIGOS\TrabajoParcial\TrabajoParcial\TrabajoParcial\bin\Debug\TrabajoParcial.exe.config
+C:\Users\MAC\Desktop\CODIGOS\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.exe
+C:\Users\MAC\Desktop\CODIGOS\TrabajoParcial\TrabajoParcial\TrabajoParcial\obj\Debug\TrabajoParcial.pdb

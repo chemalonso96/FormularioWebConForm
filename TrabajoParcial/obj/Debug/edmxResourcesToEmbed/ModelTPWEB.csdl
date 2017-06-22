@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PC1_Web_20171Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Avance">
+    <Key>
+      <PropertyRef Name="AvanceId" />
+    </Key>
+    <Property Name="AvanceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProyectoId" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DesarrolladorReponsableId" Type="Int32" Nullable="false" />
+    <Property Name="Porcentaje" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Horas" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Desarrollador" Relationship="Self.FK_Avance_Desarrollador" FromRole="Avance" ToRole="Desarrollador" />
+    <NavigationProperty Name="Proyecto" Relationship="Self.FK_Avance_Proyecto" FromRole="Avance" ToRole="Proyecto" />
+  </EntityType>
+  <EntityType Name="Desarrollador">
+    <Key>
+      <PropertyRef Name="DesarrolladorId" />
+    </Key>
+    <Property Name="DesarrolladorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TipoDocumentoId" Type="Int32" Nullable="false" />
+    <Property Name="NroDocumento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Avance" Relationship="Self.FK_Avance_Desarrollador" FromRole="Desarrollador" ToRole="Avance" />
+    <NavigationProperty Name="TipoDocumento" Relationship="Self.FK_Desarrollador_TipoDocumento" FromRole="Desarrollador" ToRole="TipoDocumento" />
+    <NavigationProperty Name="DesarrolladorProyecto" Relationship="Self.FK_DesarrolladorProyecto_Desarrollador" FromRole="Desarrollador" ToRole="DesarrolladorProyecto" />
+    <NavigationProperty Name="Proyecto" Relationship="Self.FK_Proyecto_Desarrollador" FromRole="Desarrollador" ToRole="Proyecto" />
+  </EntityType>
+  <EntityType Name="DesarrolladorProyecto">
+    <Key>
+      <PropertyRef Name="DesarrolladorProyectoId" />
+    </Key>
+    <Property Name="DesarrolladorProyectoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DesarrolladorId" Type="Int32" Nullable="false" />
+    <Property Name="ProyectoId" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Desarrollador" Relationship="Self.FK_DesarrolladorProyecto_Desarrollador" FromRole="DesarrolladorProyecto" ToRole="Desarrollador" />
+    <NavigationProperty Name="Proyecto" Relationship="Self.FK_DesarrolladorProyecto_Proyecto" FromRole="DesarrolladorProyecto" ToRole="Proyecto" />
+  </EntityType>
+  <EntityType Name="Proyecto">
+    <Key>
+      <PropertyRef Name="ProyectoId" />
+    </Key>
+    <Property Name="ProyectoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DesarrolladorReponsableId" Type="Int32" Nullable="false" />
+    <Property Name="EstaFinalizado" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Avance" Relationship="Self.FK_Avance_Proyecto" FromRole="Proyecto" ToRole="Avance" />
+    <NavigationProperty Name="Desarrollador" Relationship="Self.FK_Proyecto_Desarrollador" FromRole="Proyecto" ToRole="Desarrollador" />
+    <NavigationProperty Name="DesarrolladorProyecto" Relationship="Self.FK_DesarrolladorProyecto_Proyecto" FromRole="Proyecto" ToRole="DesarrolladorProyecto" />
+  </EntityType>
+  <EntityType Name="TipoDocumento">
+    <Key>
+      <PropertyRef Name="TipoDocumentoId" />
+    </Key>
+    <Property Name="TipoDocumentoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Siglas" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Desarrollador" Relationship="Self.FK_Desarrollador_TipoDocumento" FromRole="TipoDocumento" ToRole="Desarrollador" />
+  </EntityType>
+  <Association Name="FK_Avance_Desarrollador">
+    <End Role="Desarrollador" Type="Self.Desarrollador" Multiplicity="1" />
+    <End Role="Avance" Type="Self.Avance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Desarrollador">
+        <PropertyRef Name="DesarrolladorId" />
+      </Principal>
+      <Dependent Role="Avance">
+        <PropertyRef Name="DesarrolladorReponsableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Avance_Proyecto">
+    <End Role="Proyecto" Type="Self.Proyecto" Multiplicity="1" />
+    <End Role="Avance" Type="Self.Avance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proyecto">
+        <PropertyRef Name="ProyectoId" />
+      </Principal>
+      <Dependent Role="Avance">
+        <PropertyRef Name="ProyectoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Desarrollador_TipoDocumento">
+    <End Role="TipoDocumento" Type="Self.TipoDocumento" Multiplicity="1" />
+    <End Role="Desarrollador" Type="Self.Desarrollador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoDocumento">
+        <PropertyRef Name="TipoDocumentoId" />
+      </Principal>
+      <Dependent Role="Desarrollador">
+        <PropertyRef Name="TipoDocumentoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesarrolladorProyecto_Desarrollador">
+    <End Role="Desarrollador" Type="Self.Desarrollador" Multiplicity="1" />
+    <End Role="DesarrolladorProyecto" Type="Self.DesarrolladorProyecto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Desarrollador">
+        <PropertyRef Name="DesarrolladorId" />
+      </Principal>
+      <Dependent Role="DesarrolladorProyecto">
+        <PropertyRef Name="DesarrolladorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proyecto_Desarrollador">
+    <End Role="Desarrollador" Type="Self.Desarrollador" Multiplicity="1" />
+    <End Role="Proyecto" Type="Self.Proyecto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Desarrollador">
+        <PropertyRef Name="DesarrolladorId" />
+      </Principal>
+      <Dependent Role="Proyecto">
+        <PropertyRef Name="DesarrolladorReponsableId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DesarrolladorProyecto_Proyecto">
+    <End Role="Proyecto" Type="Self.Proyecto" Multiplicity="1" />
+    <End Role="DesarrolladorProyecto" Type="Self.DesarrolladorProyecto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proyecto">
+        <PropertyRef Name="ProyectoId" />
+      </Principal>
+      <Dependent Role="DesarrolladorProyecto">
+        <PropertyRef Name="ProyectoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PC1_Web_20171Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Avance" EntityType="Self.Avance" />
+    <EntitySet Name="Desarrollador" EntityType="Self.Desarrollador" />
+    <EntitySet Name="DesarrolladorProyecto" EntityType="Self.DesarrolladorProyecto" />
+    <EntitySet Name="Proyecto" EntityType="Self.Proyecto" />
+    <EntitySet Name="TipoDocumento" EntityType="Self.TipoDocumento" />
+    <AssociationSet Name="FK_Avance_Desarrollador" Association="Self.FK_Avance_Desarrollador">
+      <End Role="Desarrollador" EntitySet="Desarrollador" />
+      <End Role="Avance" EntitySet="Avance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Avance_Proyecto" Association="Self.FK_Avance_Proyecto">
+      <End Role="Proyecto" EntitySet="Proyecto" />
+      <End Role="Avance" EntitySet="Avance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Desarrollador_TipoDocumento" Association="Self.FK_Desarrollador_TipoDocumento">
+      <End Role="TipoDocumento" EntitySet="TipoDocumento" />
+      <End Role="Desarrollador" EntitySet="Desarrollador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesarrolladorProyecto_Desarrollador" Association="Self.FK_DesarrolladorProyecto_Desarrollador">
+      <End Role="Desarrollador" EntitySet="Desarrollador" />
+      <End Role="DesarrolladorProyecto" EntitySet="DesarrolladorProyecto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proyecto_Desarrollador" Association="Self.FK_Proyecto_Desarrollador">
+      <End Role="Desarrollador" EntitySet="Desarrollador" />
+      <End Role="Proyecto" EntitySet="Proyecto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DesarrolladorProyecto_Proyecto" Association="Self.FK_DesarrolladorProyecto_Proyecto">
+      <End Role="Proyecto" EntitySet="Proyecto" />
+      <End Role="DesarrolladorProyecto" EntitySet="DesarrolladorProyecto" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

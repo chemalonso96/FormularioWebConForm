@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PC1_Web_20171ModelStoreContainer" CdmEntityContainer="PC1_Web_20171Entities">
+    <EntitySetMapping Name="Avance">
+      <EntityTypeMapping TypeName="PC1_Web_20171Model.Avance">
+        <MappingFragment StoreEntitySet="Avance">
+          <ScalarProperty Name="AvanceId" ColumnName="AvanceId" />
+          <ScalarProperty Name="ProyectoId" ColumnName="ProyectoId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="DesarrolladorReponsableId" ColumnName="DesarrolladorReponsableId" />
+          <ScalarProperty Name="Porcentaje" ColumnName="Porcentaje" />
+          <ScalarProperty Name="Horas" ColumnName="Horas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Desarrollador">
+      <EntityTypeMapping TypeName="PC1_Web_20171Model.Desarrollador">
+        <MappingFragment StoreEntitySet="Desarrollador">
+          <ScalarProperty Name="DesarrolladorId" ColumnName="DesarrolladorId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+          <ScalarProperty Name="NroDocumento" ColumnName="NroDocumento" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DesarrolladorProyecto">
+      <EntityTypeMapping TypeName="PC1_Web_20171Model.DesarrolladorProyecto">
+        <MappingFragment StoreEntitySet="DesarrolladorProyecto">
+          <ScalarProperty Name="DesarrolladorProyectoId" ColumnName="DesarrolladorProyectoId" />
+          <ScalarProperty Name="DesarrolladorId" ColumnName="DesarrolladorId" />
+          <ScalarProperty Name="ProyectoId" ColumnName="ProyectoId" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proyecto">
+      <EntityTypeMapping TypeName="PC1_Web_20171Model.Proyecto">
+        <MappingFragment StoreEntitySet="Proyecto">
+          <ScalarProperty Name="ProyectoId" ColumnName="ProyectoId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="DesarrolladorReponsableId" ColumnName="DesarrolladorReponsableId" />
+          <ScalarProperty Name="EstaFinalizado" ColumnName="EstaFinalizado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoDocumento">
+      <EntityTypeMapping TypeName="PC1_Web_20171Model.TipoDocumento">
+        <MappingFragment StoreEntitySet="TipoDocumento">
+          <ScalarProperty Name="TipoDocumentoId" ColumnName="TipoDocumentoId" />
+          <ScalarProperty Name="Siglas" ColumnName="Siglas" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
